@@ -1,0 +1,23 @@
+name: turbo3dgs
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - --extra-index-url https://download.pytorch.org/whl/cu128
+    - torch==2.8.0+cu128
+    - torchvision==0.23.0+cu128
+    - numpy
+    - scipy
+    - pillow
+    - tqdm
+    - plyfile
+    - imageio
+    - imageio-ffmpeg
+    - opencv-python
+    - lpips
+    - ninja
