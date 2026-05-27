@@ -13,8 +13,7 @@
 Turbo-GS is a fast 3D Gaussian optimization pipeline for novel-view synthesis. It improves optimization efficiency while preserving rendering quality by combining:
 - Dilation-based rendering support for high-resolution training (including 4K settings)
 - Joint guidance from position and appearance errors for densification
-- Convergence-aware budget control for balancing growth and fitting
-- Reliability-aware Gaussian addition from mostly visited regions
+- Convergence-aware budget control 
 
 
 ## Installation
