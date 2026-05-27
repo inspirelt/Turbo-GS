@@ -1,20 +1,23 @@
-name: gaussian_splatting
+name: turbo3dgs
 channels:
   - pytorch
+  - nvidia
   - conda-forge
   - defaults
 dependencies:
-  - cudatoolkit=11.6
-  - plyfile
-  - python=3.7.13
-  - pip=22.3.1
-  - pytorch=1.12.1
-  - torchaudio=0.12.1
-  - torchvision=0.13.1
-  - tqdm
+  - python=3.10
+  - pip
   - pip:
-    - submodules/diff-gaussian-rasterization
-    - submodules/simple-knn
-    - submodules/fused-ssim
+    - --extra-index-url https://download.pytorch.org/whl/cu128
+    - torch==2.8.0+cu128
+    - torchvision==0.23.0+cu128
+    - numpy
+    - scipy
+    - pillow
+    - tqdm
+    - plyfile
+    - imageio
+    - imageio-ffmpeg
     - opencv-python
-    - joblib
+    - lpips
+    - ninja
