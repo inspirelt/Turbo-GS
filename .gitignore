@@ -1,0 +1,35 @@
+# --- Python ---
+*.pyc
+*.pyo
+*__pycache__*
+
+# --- Build artifacts (compiled CUDA extensions live under submodules/*/build/) ---
+# '**/build/' because a slash-containing pattern is anchored here and would miss submodules/*/build/.
+**/build/
+*.so
+*.o
+*.egg-info/
+.eggs/
+dist/
+*.whl
+
+# --- Editors ---
+.vscode
+
+# --- Experiment outputs and scratch ---
+outputs*
+temp*
+debug*
+view*
+wandb*
+tensorboard_3d
+screenshots
+*.bak
+
+# --- Logs: 'log*', '*.log' and '*.log.*' (split logs such as run_foo.log.part1) ---
+log*
+*.log
+*.log.*
+
+# --- Datasets ---
+data

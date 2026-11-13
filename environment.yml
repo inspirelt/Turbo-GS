@@ -1,0 +1,27 @@
+# See INSTALL.md for the build sequence.
+name: sgs_release
+channels:
+  - defaults
+dependencies:
+  - python=3.10.22
+  - pip=26.2.2
+  - setuptools=84.0.0
+  - wheel=0.48.0
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu130
+      - torch==2.14.1+cu130
+      - torchvision==0.29.1+cu130
+      - numpy==2.2.6
+      - scipy==1.15.3
+      - pillow==12.3.0
+      - opencv-python==5.0.0.93
+      - plyfile==1.1.5
+      - laspy==2.7.0
+      - lpips==0.1.4
+      - wandb==0.31.0
+      - tqdm==4.70.1
+      - colorama==0.4.6
+      - jaxtyping==0.3.7
+      - ninja==1.13.2
+# After the env exists, build torch_scatter and the three extensions in submodules/ with
+# `pip install --no-build-isolation` (their setup.py imports torch); the commands are in INSTALL.md.
